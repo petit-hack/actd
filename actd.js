@@ -150,5 +150,5 @@ document.addEventListener("DOMContentLoaded", function () {
   $(".close-svg-block, .close-modal").on("click", closeModal);
   $(".template-wrapper").each(templateDirectory);
   $(".wrapper-dept").each(count);
-  $(".text-input-template").on("change", updateSecondForm);
+  $(".text-input-template").on("keyup change", updateSecondForm);
 });
