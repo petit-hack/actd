@@ -81,17 +81,6 @@ function closeModal() {
   $(".excel-mopal_section").toggleClass("not-visible");
 }
 
-/*function countTemplate() {
-  let templateNumber = $(this).find(".itemindex").length + 1;
-  if (templateNumber === 1) {
-    $(this).remove(); //
-    //$(this).find(".data-source_element-violet").remove(); //itemtocount_wrapper
-  } else {
-    $(this).find(".number-template").text(templateNumber);
-    $(this).find(".itemtocount_wrapper").remove();
-  }
-}*/
-
 function slider1() {
   let splides = $(".splide-template");
   for (let i = 0, splideLength = splides.length; i < splideLength; i++) {
@@ -150,24 +139,16 @@ function updateSecondForm() {
   $(".hiddenform_collect-data-onclick #name-template").val(nameOK);
   $(".hiddenform_collect-data-onclick #email-template").val(emailOK);
 }
-/*function actiondeskClick() {
-  preventDefault();
-  let hiddenValue = $("spreadsheet-type").val();
-  let newValue = hiddenValue + "-Actiondesk";
-  $("spreadsheet-type").val(newValue);
 
-}*/
 document.addEventListener("DOMContentLoaded", function () {
   slider1();
   $(".wrapper-dept").each(departmentID);
-  //$(".data-source_item").each(countTemplate);//
   $(".button-stroke").on("click", changeRedirect);
   $(".text-linkarrow_wrapper").on("click", updateModal);
   $("#actiondesk-btn").on("click", updateModal);
-  $("input").on("change", checkForm);
+  $("input").on("keyup change", checkForm);
   $(".close-svg-block, .close-modal").on("click", closeModal);
   $(".template-wrapper").each(templateDirectory);
   $(".wrapper-dept").each(count);
   $(".text-input-template").on("change", updateSecondForm);
-  //$(".wf-form-template-form-v2").submit(actiondeskClick);
 });
